@@ -5,6 +5,8 @@ class Avalanche_AccidentSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (
             'Name',
+            'Date',
+            'State',
             'Lat',
             'Long',
             'pub_date',
