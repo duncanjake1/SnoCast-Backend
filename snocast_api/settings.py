@@ -55,7 +55,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+# Allows the frontend (running on localhost:3000) to get data from python server
+# Will likely need to play around with this for heroku support
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000'
+]
+
 
 ROOT_URLCONF = 'snocast_api.urls'
 
